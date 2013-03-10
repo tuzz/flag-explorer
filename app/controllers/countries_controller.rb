@@ -8,8 +8,7 @@ class CountriesController < ApplicationController
     @country = Country.find(params[:id])
 
     svg = Net::HTTP.get(URI(@country.image_url))
-    profile = SVGProfiler.new(svg)
-    @histogram = profile.histogram(threshold = 0.01)
+    @histogram = SVGProfiler.new(svg).histogram
   end
 
 end
