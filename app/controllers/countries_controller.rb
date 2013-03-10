@@ -1,4 +1,4 @@
-class CountriesController < ActionController::Base
+class CountriesController < ApplicationController
 
   def index
     @countries = Country.all
@@ -6,6 +6,10 @@ class CountriesController < ActionController::Base
 
   def show
     @country = Country.find(params[:id])
+
+    svg = Net::HTTP.get(URI(@country.image_url))
+    profile = SVGProfiler.new(svg)
+    @histogram = profile.histogram(threshold = 0.01)
   end
 
 end

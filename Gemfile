@@ -4,6 +4,7 @@ gem 'rails', '3.2.12'
 gem 'mysql2'
 gem 'jquery-rails'
 gem 'google_drive'
+gem 'svg_profiler'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'

@@ -1,9 +1,11 @@
 <h1><%= @country.name %></h1>
 
-<%= image_tag @country.image_url, :width => 600 %>
+<%= link_to "Back", countries_path %>
 
 <p>Population: <%= @country.population %></p>
 <p>Area: <%= @country.area %> km2</p>
 <p>Continent: <%= @country.continent %></p>
 
-<%= link_to "Back", countries_path %>
+<%= image_tag @country.image_url, :class => "flag" %>
+
+<%= histogram %>
