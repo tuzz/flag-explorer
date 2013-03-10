@@ -1,0 +1,14 @@
+<% @countries.group_by(&:continent).each do |continent, countries| %>
+
+  <h2><%= continent %></h2>
+
+  <table>
+    <% countries.each do |country| %>
+      <tr>
+        <td><%= image_tag country.image_url, width: 50 %></td>
+        <td><%= link_to country.name, country_path(country) %></td>
+      </tr>
+    <% end %>
+  </table>
+
+<% end %>

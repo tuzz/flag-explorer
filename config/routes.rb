@@ -1,4 +1,6 @@
 Explorer::Application.routes.draw do
+  resources :countries, :only => [:index, :show]
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
