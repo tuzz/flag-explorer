@@ -1,6 +1,6 @@
 ## Explorer
 
-Coming soon...
+View the colour breakdowns for various flags of the world.
 
 ## Setup
 
